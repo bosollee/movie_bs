@@ -1,3 +1,7 @@
 #Movie App
 
-React JS (2019 update)
+with React JS
+
+- Last update: 2020.02.26
+
+- https://bosollee.github.io/movie_bs
