@@ -1,46 +1,52 @@
 import React from 'react';
-  
+import axios from 'axios';
+import Movie from './movie';
+import "./app.css";
 
-//class react.component dont have return. they have render method. because they are not function.
-
-//function component: return, show it on screen.
-//class component: extends from react.Component, automatically execute render method, show it on screen.
-
-//we use class component because to use state! to change ***data!***
-
-//but state is just an object, what can i do with this? To change data!
-//But we cant change state, have to use setState. setState->refresh state, and call render function.
-
-//using state in setState is not a good idea.
-//we can use *** this.setState(current => ({x: current.count}));*** instead.
-
-// 여기까지 3-1
-
-//mounting,  updating, unmounting
-//mounting  constructor() javascript 생성시 생기는거
-
-class App extends React.Component{
-  state={
-    count:0
+class App extends React.Component {
+  state = {
+    isLoading: true,
+    movies: []
   };
 
-  add = () => {
-    this.setState(current => ({count: current.count +1}))
-  };
-  minus = () => {
-    this.setState(current=>({count:this.state.count-1}))
+  getMovies = async () => {
+    const {
+      data: { data: { movies } }
+    } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
+
+    this.setState({ movies, isLoading: false });
   };
 
-  render(){
-    return (
-    <div>
-      <h2>I am a class Num: {this.state.count} </h2>
-      <button onClick={this.add}>Add</button>
-      <button onClick={this.minus}>Minus</button>
-      </div>
-    );
+  componentDidMount() {
+    this.getMovies();
   }
 
+  render() {
+    const { isLoading, movies } = this.state;
+    return (
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+            <div className="movies">
+              {movies.map(movie => (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                  genres={movie.genres}
+                />
+              ))}
+            </div>
+          )}
+      </section>
+    );
+  }
 }
 
 export default App;
