@@ -1,3 +1,3 @@
-#Movie App (2019 update)
+#Movie App
 
-React JS
+React JS (2019 update)
