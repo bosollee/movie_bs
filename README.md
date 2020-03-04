@@ -1,7 +1,16 @@
-#Movie App
+Movie App
+=============
+* * *
+Link: [MovieAdvisor][https://bosollee.github.io/movie_bs]
+![MovieAdvisor](./images/cinema.png)
 
-with React JS
+Project Introduction
+-------------
+영화 목록을 불러와 상세 정보 확인 기능을 제공하는 React Project 입니다.
 
-- Last update: 2020.02.26
+Website Display
+-------------
 
-- https://bosollee.github.io/movie_bs
+Skills
+-------------
+React, JavaScript, HTML, CSS
