@@ -1,7 +1,7 @@
 Movie App
 =============
-https://bosollee.github.io/movie_bs
 ![MovieAdvisor](./images/cinema.png)
+https://bosollee.github.io/movie_bs
 
 Project Introduction
 -------------
@@ -9,7 +9,7 @@ Project Introduction
 
 Website Display
 -------------
-Update Coming Soon...
+Update Comming Soon...
 
 Skills
 -------------
