@@ -9,7 +9,7 @@ Project Introduction
 
 Website Display
 -------------
-Update Comming Soon...
+Update Coming Soon...
 
 Skills
 -------------
