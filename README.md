@@ -2,7 +2,7 @@
 # Movie Web
 
 Movie List Web App study
-ReactJS, JavaScript, HTML, CSS
+<br>ReactJS, JavaScript, HTML, CSS
 
 ## Screenshot
 
@@ -11,7 +11,7 @@ ReactJS, JavaScript, HTML, CSS
 ## Features
 
 Movie list
-Movie details
+<br>Movie details
 
 
 ## Try it out(Expected)
